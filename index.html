@@ -47,11 +47,11 @@
       </form>
 
       <div class="hero-mockup">
-        <div class="phone-lazy" style="width:240px;aspect-ratio:1192/2527;border-radius:39px;background:var(--color-bg-warm);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
-          <img src="images/app-screen-1.png?v=28" alt="Lina app - daily affirmation screen" loading="lazy" onload="this.style.opacity=1" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease;">
+        <div class="phone-lazy fade-in-stagger" style="width:240px;aspect-ratio:1192/2527;border-radius:39px;background:var(--color-bg-warm);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
+          <img src="images/app-screen-1.png?v=29" alt="Lina app - daily affirmation screen" loading="lazy" onload="this.style.opacity=1" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease 0.3s;">
         </div>
-        <div class="phone-lazy" style="width:240px;aspect-ratio:1192/2527;border-radius:39px;background:var(--color-bg-warm);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
-          <img src="images/app-screen-2.png?v=28" alt="Lina app - practice session screen" loading="lazy" onload="this.style.opacity=1" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease;">
+        <div class="phone-lazy fade-in-stagger stagger-2" style="width:240px;aspect-ratio:1192/2527;border-radius:39px;background:var(--color-bg-warm);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
+          <img src="images/app-screen-2.png?v=29" alt="Lina app - practice session screen" loading="lazy" onload="this.style.opacity=1" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease 0.3s;">
         </div>
       </div>
     </div>
@@ -180,7 +180,7 @@
       });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll('.fade-in, .fade-in-child').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in, .fade-in-child, .fade-in-stagger').forEach(el => observer.observe(el));
   </script>
 
 </body>
