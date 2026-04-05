@@ -38,11 +38,20 @@
       <h1>Words that change the way you feel</h1>
       <p>Personalized affirmations delivered to your day. Build self-love, nurture confidence, and cultivate a mindful life with Lina.</p>
 
-      <p class="hero-coming-soon" style="font-size:0.95rem;color:var(--color-accent);font-weight:500;margin-bottom:8px;">Available soon on the App Store and Google Play</p>
+      <p class="hero-coming-soon" style="font-size:0.95rem;color:var(--color-accent);font-weight:500;margin-bottom:20px;">Available soon on the App Store and Google Play</p>
+
+      <form class="waitlist-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You\u0027re on the list!'; this.querySelector('button').disabled=true; this.querySelector('input').disabled=true;" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:440px;margin:0 auto 0;">
+        <input type="email" placeholder="Your email address" required style="flex:1;min-width:220px;padding:14px 20px;border-radius:12px;border:1px solid var(--color-border);background:var(--color-white);font-family:var(--font-body);font-size:0.9rem;color:var(--color-text);outline:none;">
+        <button type="submit" style="padding:14px 28px;border-radius:12px;border:none;background:var(--color-text);color:var(--color-white);font-family:var(--font-body);font-size:0.9rem;font-weight:500;cursor:pointer;">Join waitlist</button>
+      </form>
 
       <div class="hero-mockup">
-        <img src="images/app-screen-1.png?v=27" alt="Lina app - daily affirmation screen" style="width:240px;border-radius:39px;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
-        <img src="images/app-screen-2.png?v=27" alt="Lina app - practice session screen" style="width:240px;border-radius:39px;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
+        <div class="phone-lazy" style="width:240px;aspect-ratio:1192/2527;border-radius:39px;background:var(--color-bg-warm);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
+          <img src="images/app-screen-1.png?v=28" alt="Lina app - daily affirmation screen" loading="lazy" onload="this.style.opacity=1" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease;">
+        </div>
+        <div class="phone-lazy" style="width:240px;aspect-ratio:1192/2527;border-radius:39px;background:var(--color-bg-warm);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);">
+          <img src="images/app-screen-2.png?v=28" alt="Lina app - practice session screen" loading="lazy" onload="this.style.opacity=1" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease;">
+        </div>
       </div>
     </div>
   </section>
@@ -136,7 +145,7 @@
   <!-- ─── Footer ─── -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-left">&copy; 2026 Solacium Ventures Ltd. All rights reserved.</div>
+      <div class="footer-left">&copy; 2026 Lina. All rights reserved.</div>
       <div class="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
