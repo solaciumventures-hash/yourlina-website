@@ -369,13 +369,13 @@
   <!-- ─── Blog Hero ─── -->
   <section class="blog-hero">
     <div class="blog-hero-inner">
-      <h1>The Lina Journal</h1>
-      <p>Science-backed insights, practical guides, and stories about the power of positive thinking.</p>
+      <h1 class="fade-in">The Lina Journal</h1>
+      <p class="fade-in">Science-backed insights, practical guides, and stories about the power of positive thinking.</p>
     </div>
   </section>
 
   <!-- ─── Article Grid ─── -->
-  <div class="blog-grid">
+  <div class="blog-grid fade-in-child">
 
     <!-- Featured Article -->
     <a href="../articles/do-affirmations-work.html" class="article-card featured">
@@ -808,7 +808,7 @@
   </div>
 
   <!-- ─── Newsletter ─── -->
-  <div class="blog-newsletter">
+  <div class="blog-newsletter fade-in">
     <div class="newsletter-card">
       <h2>Stay inspired</h2>
       <p>Get a monthly article on wellness, affirmations, and mindful living delivered to your inbox.</p>
@@ -822,7 +822,7 @@
   <!-- ─── Footer ─── -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-left">&copy; 2026 Solacium Ventures Ltd. All rights reserved.</div>
+      <div class="footer-left">&copy; 2026 Lina. All rights reserved.</div>
       <div class="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
@@ -859,6 +859,17 @@
     if (document.querySelectorAll('.hidden-post').length === 0) {
       loadMoreWrapper.classList.add('hidden');
     }
+
+    // Scroll fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .fade-in-child').forEach(el => observer.observe(el));
   </script>
 
 </body>

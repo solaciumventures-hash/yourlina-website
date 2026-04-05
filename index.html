@@ -60,10 +60,10 @@
   <!-- ─── Features ─── -->
   <section class="features" id="features">
     <div class="features-inner">
-      <div class="section-label">Why Lina</div>
-      <h2 class="section-title">A gentler way to start your day</h2>
+      <div class="section-label fade-in">Why Lina</div>
+      <h2 class="section-title fade-in">A gentler way to start your day</h2>
 
-      <div class="features-grid">
+      <div class="features-grid fade-in-child">
         <div class="feature-card">
           <div class="feature-icon">&#9825;</div>
           <h3>Thousands of Affirmations</h3>
@@ -106,10 +106,10 @@
   <!-- ─── Testimonials ─── -->
   <section class="testimonials">
     <div class="testimonials-inner">
-      <div class="section-label">Early feedback</div>
-      <h2 class="section-title">Words from our beta testers</h2>
+      <div class="section-label fade-in">Early feedback</div>
+      <h2 class="section-title fade-in">Words from our beta testers</h2>
 
-      <div class="testimonials-grid">
+      <div class="testimonials-grid fade-in-child">
         <div class="testimonial-card">
           <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
           <blockquote>"I start every morning with Lina. The affirmations feel personal, like someone wrote them just for me."</blockquote>
@@ -134,8 +134,8 @@
   <!-- ─── CTA / Waitlist ─── -->
   <section class="cta">
     <div class="cta-inner">
-      <h2>Join the waitlist</h2>
-      <p>Launching soon. Be the first to know when Lina is available on the App Store and Google Play.</p>
+      <h2 class="fade-in">Join the waitlist</h2>
+      <p class="fade-in">Launching soon. Be the first to know when Lina is available on the App Store and Google Play.</p>
       <form class="waitlist-form" method="POST" action="https://formspree.io/f/solacium.ventures@gmail.com" onsubmit="event.preventDefault(); var f=this; var d=new FormData(f); fetch(f.action,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){f.querySelector('button').textContent='You\u0027re on the list!';f.querySelector('button').disabled=true;f.querySelector('input').disabled=true;f.querySelector('input').value='';}});" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:440px;margin:0 auto;">
         <input type="email" name="email" placeholder="Your email address" required style="flex:1;min-width:220px;padding:14px 20px;border-radius:12px;border:1px solid var(--color-border);background:var(--color-white);font-family:var(--font-body);font-size:0.9rem;color:var(--color-text);outline:none;">
         <input type="hidden" name="_subject" value="New Lina waitlist signup">
@@ -170,6 +170,17 @@
         link.classList.add('active');
       });
     });
+
+    // Scroll fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in, .fade-in-child').forEach(el => observer.observe(el));
   </script>
 
 </body>
